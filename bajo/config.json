@@ -1,0 +1,5 @@
+{
+  "remoteUrl": "https://nominatim.openstreetmap.org",
+  "limit": 10,
+  "dependencies": ["bajo-extra"]
+}

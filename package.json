@@ -1,0 +1,23 @@
+{
+  "name": "sumba-nominatim",
+  "version": "1.0.0",
+  "description": "Openstreetmap's Nominatim API for Bajo Framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ardhi/sumba-nominatim.git"
+  },
+  "keywords": [
+    "nominatim",
+    "waibu",
+    "sumba",
+    "bajo",
+    "framework"
+  ],
+  "author": "Ardhi Lukianto <ardhi@lukianto.com>",
+  "license": "MIT"
+}
