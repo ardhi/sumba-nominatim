@@ -1,5 +1,6 @@
 {
   "remoteUrl": "https://nominatim.openstreetmap.org",
   "limit": 10,
+  "polygonThreshold": 0.009,
   "dependencies": ["bajo-extra"]
 }

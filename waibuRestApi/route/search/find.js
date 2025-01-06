@@ -8,6 +8,7 @@ const find = {
     const filter = parseFilter(req)
     const headers = parseObject(req.headers, { parseValue: true })
     const extra = { polygon: headers['x-polygon'] }
+    if (headers['x-polygon-threshold']) extra.polygonThreshold = parseFloat(headers['x-polygon-threshold']) || this.config.polygonThreshold
     let data = await search({ query: filter.query, limit: filter.limit }, extra)
     data = data.map(d => {
       const nd = {}
@@ -19,8 +20,7 @@ const find = {
       nd.lng = parseFloat(nd.lon)
       nd.lat = parseFloat(nd.lat)
       nd.addressType = nd.addresstype
-      if (nd.geojson) nd.polyCoords = nd.geojson.coordinates
-      return omit(nd, ['boundingbox', 'lon', 'geojson', 'addresstype', 'placeId'])
+      return omit(nd, ['boundingbox', 'lon', 'addresstype', 'placeId'])
     })
     return { data }
   }
