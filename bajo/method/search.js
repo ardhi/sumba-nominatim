@@ -13,7 +13,7 @@ async function search (params = {}, extra = {}) {
   opts.query.limit = opts.query.limit ?? this.config.limit
   if (extra.polygon) {
     opts.query.polygon_geojson = 1
-    opts.query.polygon_threshold = opts.query.polygonThreshold ?? this.config.polygonThreshold
+    opts.query.polygon_threshold = extra.polygonThreshold ?? this.config.polygonThreshold
   }
   return await fetch(endpoint, opts, { agent: this.config.userAgent })
 }

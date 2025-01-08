@@ -1,4 +1,8 @@
 {
+  "waibu": {
+    "title": "OpenStreetMap Nominatim",
+    "prefix": "nominatim"
+  },
   "remoteUrl": "https://nominatim.openstreetmap.org",
   "limit": 10,
   "polygonThreshold": 0.009,
