@@ -1,5 +1,5 @@
 async function search (params = {}, extra = {}) {
-  const { pick } = this.app.bajo.lib._
+  const { pick } = this.lib._
   const { fetch } = this.app.bajoExtra
   const endpoint = `${this.config.remoteUrl}/search`
   const opts = {

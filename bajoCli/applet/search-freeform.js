@@ -1,6 +1,6 @@
 async function searchFreeform (path, ...args) {
   const { importPkg } = this.app.bajo
-  const { isEmpty } = this.app.bajo.lib._
+  const { isEmpty } = this.lib._
   const { search } = this.app.sumbaNominatim
   const input = await importPkg('bajoCli:@inquirer/input')
   const { getOutputFormat, writeOutput } = this.app.bajoCli
