@@ -1,6 +1,6 @@
 {
   "name": "sumba-nominatim",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "Openstreetmap's Nominatim API for Bajo Framework",
   "main": "index.js",
   "scripts": {
