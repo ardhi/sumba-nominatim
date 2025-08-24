@@ -4,7 +4,7 @@ async function factory (pkgName) {
   return class SumbaNominatim extends this.lib.Plugin {
     constructor () {
       super(pkgName, me.app)
-      this.alias = 'snom'
+      this.alias = 'nominatim'
       this.dependencies = ['bajo-extra']
       this.config = {
         waibu: {
