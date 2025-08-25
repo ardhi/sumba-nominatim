@@ -1,11 +1,12 @@
 async function factory (pkgName) {
   const me = this
 
-  return class SumbaNominatim extends this.lib.Plugin {
+  class SumbaNominatim extends this.lib.Plugin {
+    static alias = 'nominatim'
+    static dependencies = ['bajo-extra']
+
     constructor () {
       super(pkgName, me.app)
-      this.alias = 'nominatim'
-      this.dependencies = ['bajo-extra']
       this.config = {
         waibu: {
           title: 'OpenStreetMap Nominatim',
@@ -37,6 +38,8 @@ async function factory (pkgName) {
       return await fetchUrl(endpoint, opts, { agent: this.config.userAgent })
     }
   }
+
+  return SumbaNominatim
 }
 
 export default factory
