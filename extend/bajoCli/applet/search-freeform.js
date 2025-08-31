@@ -1,6 +1,6 @@
 async function searchFreeform (path, ...args) {
   const { importPkg } = this.app.bajo
-  const { isEmpty } = this.lib._
+  const { isEmpty } = this.app.lib._
   const { search } = this.app.sumbaNominatim
   const input = await importPkg('bajoCli:@inquirer/input')
   const { getOutputFormat, writeOutput } = this.app.bajoCli
@@ -8,7 +8,7 @@ async function searchFreeform (path, ...args) {
   let query = args[0]
   if (isEmpty(query)) {
     query = await input({
-      message: this.print.write('Please enter a query:')
+      message: this.t('Please enter a query:')
     })
   }
   if (isEmpty(query)) return this.print.fail('Query must be provided!', { exit: this.app.bajo.applet })

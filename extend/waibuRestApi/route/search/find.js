@@ -1,7 +1,7 @@
 const find = {
   schema: false,
   handler: async function (req, reply) {
-    const { camelCase, omit } = this.lib._
+    const { camelCase, omit } = this.app.lib._
     const { parseObject } = this.app.bajo
     const { search } = this.app.sumbaNominatim
     const { parseFilter } = this.app.waibu

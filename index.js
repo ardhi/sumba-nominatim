@@ -1,7 +1,7 @@
 async function factory (pkgName) {
   const me = this
 
-  class SumbaNominatim extends this.lib.Plugin {
+  class SumbaNominatim extends this.app.pluginClass.base {
     static alias = 'nominatim'
     static dependencies = ['bajo-extra']
 
@@ -19,7 +19,7 @@ async function factory (pkgName) {
     }
 
     search = async (params = {}, extra = {}) => {
-      const { pick } = this.lib._
+      const { pick } = this.app.lib._
       const { fetchUrl } = this.app.bajoExtra
       const endpoint = `${this.config.remoteUrl}/search`
       const opts = {
