@@ -11,7 +11,7 @@ async function searchFreeform (path, ...args) {
       message: this.t('Please enter a query:')
     })
   }
-  if (isEmpty(query)) return this.print.fail('Query must be provided!', { exit: this.app.bajo.applet })
+  if (isEmpty(query)) return this.print.fail('Query must be provided!', { exit: this.app.applet })
   const spinText = 'Fetching...'
   const spin = this.print.spinner({ showCounter: true }).start(spinText)
 
