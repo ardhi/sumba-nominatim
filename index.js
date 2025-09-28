@@ -1,6 +1,17 @@
+/**
+ * Plugin factory
+ *
+ * @param {string} pkgName - NPM package name
+ * @returns {class}
+ */
 async function factory (pkgName) {
   const me = this
 
+  /**
+   * SumbaNominatim class
+   *
+   * @class
+   */
   class SumbaNominatim extends this.app.pluginClass.base {
     static alias = 'nominatim'
     static dependencies = ['bajo-extra']
